@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Mobiiliprojekti",
+    "slug": "Mobiiliprojekti",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "plugins": [
+      ["expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location.",
+        }],
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "Allow $(PRODUCT_NAME) to access your device motion."
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.Mobiiliprojekti",
+      "infoPlist": {
+        "NSMotionUsageDescription": "This app uses motion sensors to track your activity.",
+        "UIBackgroundModes": ["motion", "location"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.anonymous.Mobiiliprojekti",
+      "permissions": [
+      "android.permission.ACTIVITY_RECOGNITION",
+      "android.permission.FOREGROUND_SERVICE",
+           "android.permission.HIGH_SAMPLING_RATE_SENSORS"
+    ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
